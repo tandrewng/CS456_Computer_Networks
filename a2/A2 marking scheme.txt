@@ -1,0 +1,29 @@
+CS 456/656 A2 Marking Sheet
+
+[15] (Directly connect sender & receiver) Successfully transmit a file without delay and loss. Test seqnum.log, ack.log and arrival.log. N must not reset all the time for
+	[5] a file less than 10 packets (6 packets ) without delay and loss.
+	[10] a file larger than 32 packets (43 packets) without delay and loss.
+
+[25] (Connect sender & receiver to nEmulator) Successfully transmit a file with delay and loss
+
+[10] Logging	
+	[-10] Logs not recorded
+	[-5] Logs incorrectly recorded
+
+[5] Timer: exactly one timer    
+
+[5] Window: sliding dynamic window, starts at N=1, increasing size with new ACKs, capped at 10 packets   
+
+[5] Packet
+	[-5] Packet format not respected
+
+[30] Simplified TCP behavior. Test seqnum.log, ack.log, N.log and arrival.log.   
+	[10] data/ACK with delay and loss, test receiver side behavior (buffer out-of-order packets)	
+	[5] data/ACK with delay and loss, test receiver side behavior (cumulative ACK)	
+	[5] data/ACK with delay and loss, test sender side behavior (discard duplicate ACKs)              
+	[10] data/ACK with delay and loss, test sender side behavior (Timeout, retransmission, reset N)                           
+
+[5] Other Implementation Issues
+	[-5] No README/Makefile when applicable
+	[-5] Bad code style/no comments
+

@@ -1,0 +1,23 @@
+Assignment 1 CS456 Computer Networks
+A congestion controlled pipelined RDT
+Goal: to implement a congestion controlled pipelined Reliable Data Transfer
+(RDT) protocol over UDP, which could be used to transfer a text file from one
+host to another across an unreliable network.
+
+Makefile not used since coded in python
+
+Execution example:
+replace numbers with applicable open sockets
+./nEmulator 9991 host2 9994 9993 host3 9992 1 0.2 0
+./receiver host1 9993 9994 <output File>
+./sender host1 9991 9992 50 <input file>
+
+Outputs:
+data from <input file> to <output File>
+ack.log - acks received by sender
+N.log - N updates in receiver
+seqnum.log - seqnum of packets sent by sender
+arrival.log - seqnum of arrivals at receiver
+
+Built and tested on ubuntu2004-002 for same machine testing.
+Built and tested on ubuntu2004-002 and ubuntu2004-008 for different machine testing.
